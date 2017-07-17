@@ -9,7 +9,7 @@ namespace LaHelper
         {
             EloquentAdapter();
 
-            Providers.Status.CheckStatus();
+            Providers.Status.Online();
         }
         
         static void EloquentAdapter()

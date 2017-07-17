@@ -1,5 +1,4 @@
-﻿using System;
-using LaHelper;
+﻿using LaHelper;
 
 namespace Nasty.Vendor.Zoond.Eloquent
 {
@@ -7,7 +6,6 @@ namespace Nasty.Vendor.Zoond.Eloquent
     {
         protected void OnServerTime()
         {
-            //Providers.Monolit.writeable(String.Format("Серверное время: {0}", Providers.Shelf.time())).info();
             Providers.Monolit.Writeable(Providers.Accelerator.Time()).Info();
         }
 
@@ -15,6 +13,17 @@ namespace Nasty.Vendor.Zoond.Eloquent
         {
             Providers.Monolit.Writeable(Providers.Accelerator.Date()).Info();
         }
+
+        protected void OnServerStability()
+        {
+            Providers.Status.Stable();
+        }
+
+        protected void OnServerOnline()
+        {
+            Providers.Status.Online();
+        }
+
         public void OnProgramRestart()
         {
             Application.Restart();

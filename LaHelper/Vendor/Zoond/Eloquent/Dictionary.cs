@@ -3,7 +3,7 @@
     class Dictionary
     {
         public const string COMMAND_SERVER_STABILITY = "server stability";
-        public const string COMMAND_SERVER_ISONLINE = "serve online";
+        public const string COMMAND_SERVER_ISONLINE = "server online";
         public const string COMMAND_SERVER_TIME = "server time";
         public const string COMMAND_SERVER_DATE = "server date";
 

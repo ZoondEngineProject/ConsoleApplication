@@ -49,6 +49,19 @@ namespace Nasty.Vendor.Zoond.Eloquent
                             break;
                         }
 
+                    case Dictionary.COMMAND_SERVER_STABILITY:
+                        {
+                            this.OnServerStability();
+                            break;
+                        }
+
+                    case Dictionary.COMMAND_SERVER_ISONLINE:
+                        {
+                            this.OnServerOnline();
+                            break;
+                        }
+
+
                     case Dictionary.COMMAND_SERVER_DATE:
                         {
                             this.OnServerDate();
