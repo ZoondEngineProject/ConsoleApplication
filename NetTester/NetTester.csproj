@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E9D413A2-AE9F-4DF8-9142-A520908F88A2}</ProjectGuid>
+    <ProjectGuid>{7C75EB56-7FBF-498F-B698-4FD62A52DFA9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LaHelper</RootNamespace>
-    <AssemblyName>LaHelper</AssemblyName>
+    <RootNamespace>NetTester</RootNamespace>
+    <AssemblyName>NetTester</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,24 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers.cs" />
-    <Compile Include="Vendor\EP\Network\Accelerator.cs" />
-    <Compile Include="Vendor\EP\Network\Connector.cs" />
-    <Compile Include="Vendor\EP\Network\Stabilisher.cs" />
-    <Compile Include="Vendor\Zoond\Eloquent\Commands.cs" />
-    <Compile Include="Vendor\Zoond\Eloquent\Dictionary.cs" />
-    <Compile Include="Vendor\Zoond\Eloquent\Exceptions\CommandErrorException.cs" />
-    <Compile Include="Vendor\Zoond\Eloquent\Exceptions\RunErrorException.cs" />
-    <Compile Include="Vendor\Zoond\Eloquent\Handler.cs" />
-    <Compile Include="Vendor\Zoond\Monolit\Handler.cs" />
-    <Compile Include="Vendor\Zoond\Shelf\Handler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

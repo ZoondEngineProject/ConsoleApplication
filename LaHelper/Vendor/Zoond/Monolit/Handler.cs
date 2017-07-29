@@ -1,5 +1,5 @@
 ﻿using System;
-using LaHelper;
+using Console;
 
 namespace Nasty.Vendor.Zoond.Monolit
 {
@@ -24,7 +24,7 @@ namespace Nasty.Vendor.Zoond.Monolit
             this.Set(ConsoleColor.Black, ConsoleColor.Red);
 
             this.text = String.Format("{0} >> {1}", Providers.Shelf.time(), this.text);
-            Console.WriteLine(this.text);
+            System.Console.WriteLine(this.text);
 
             this.Reset();
         }
@@ -33,7 +33,7 @@ namespace Nasty.Vendor.Zoond.Monolit
             this.Set(ConsoleColor.Black, ConsoleColor.DarkYellow);
 
             this.text = String.Format("{0} >> {1}", Providers.Shelf.time(), this.text);
-            Console.WriteLine(this.text);
+            System.Console.WriteLine(this.text);
 
             this.Reset();
         }
@@ -43,7 +43,7 @@ namespace Nasty.Vendor.Zoond.Monolit
             this.Set(ConsoleColor.Black, ConsoleColor.Gray);
 
             this.text = String.Format("{0} >> {1}", Providers.Shelf.time(), this.text);
-            Console.WriteLine(this.text);
+            System.Console.WriteLine(this.text);
 
             this.Reset();
         }
@@ -53,7 +53,7 @@ namespace Nasty.Vendor.Zoond.Monolit
             this.Set(ConsoleColor.Black, ConsoleColor.DarkGreen);
 
             this.text = String.Format("{0} >> {1}", Providers.Shelf.time(), this.text);
-            Console.WriteLine(this.text);
+            System.Console.WriteLine(this.text);
 
             this.Reset();
         }
@@ -61,14 +61,14 @@ namespace Nasty.Vendor.Zoond.Monolit
 
         private void Set(ConsoleColor back, ConsoleColor fore)
         {
-            Console.BackgroundColor = back;
-            Console.ForegroundColor = fore;
+            System.Console.BackgroundColor = back;
+            System.Console.ForegroundColor = fore;
         }
 
         private void Reset()
         {
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
+            System.Console.BackgroundColor = ConsoleColor.Black;
+            System.Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }

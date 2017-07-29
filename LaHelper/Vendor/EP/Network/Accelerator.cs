@@ -1,4 +1,4 @@
-﻿namespace LaHelper.Vendor.EP.Network
+﻿namespace Console.Vendor.EP.Network
 {
     class Accelerator : Connector
     {

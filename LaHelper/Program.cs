@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Threading;
 
-namespace LaHelper
+namespace Console
 {
     class Program
     {
         static void Main(string[] args)
         {
+            PrintInfo();
             EloquentAdapter();
+        }
 
-            Providers.Status.Online();
+        private static void PrintInfo()
+        {
+            Providers.Monolit.Writeable("Добро пожаловать в LaHelper").Info();
+            Providers.Monolit.Writeable("Версия: 0.37.143а").Info();
+            Providers.Monolit.Writeable("Автор: Alexey Mango").Info();
+            Providers.Monolit.Writeable("Zoond Engine Lab 2017 (c)").Info();
         }
         
         static void EloquentAdapter()
@@ -30,6 +37,7 @@ namespace LaHelper
             finally
             {
                 Providers.Monolit.Writeable("Модуль @Eloquent инициализирован.").Success();
+                Providers.Monolit.Writeable("Введите help для доступа к списку команд").Info();
             }
         }
 
@@ -40,14 +48,14 @@ namespace LaHelper
                 Providers.Monolit.Writeable("Модуль @Monolit инициализирован.").Success();
             } else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Ошибка ! Модуль @Monolit не инициализирован !");
+                System.Console.ForegroundColor = ConsoleColor.Red;
+                System.Console.WriteLine("Ошибка ! Модуль @Monolit не инициализирован !");
             }
         }
 
         public static void Restart()
         {
-            Main(null);
+            Providers.Monolit.Writeable("В разработке...").Error();
         }
     }
 }

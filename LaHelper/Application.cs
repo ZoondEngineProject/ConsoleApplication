@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Threading;
 
-namespace LaHelper
+namespace Console
 {
     class Application
     {
         public static void Shutdown()
         {
+            Providers.Monolit.Writeable("Сервер будет выключен через 3 секунды").Warning();
+            Thread.Sleep(3000);
             Environment.Exit(0);
         }
 

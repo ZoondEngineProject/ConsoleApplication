@@ -1,7 +1,7 @@
 ﻿using System.Net.NetworkInformation;
 using System.Net;
 
-namespace LaHelper.Vendor.EP.Network
+namespace Console.Vendor.EP.Network
 {
     class Connector
     {
@@ -18,6 +18,18 @@ namespace LaHelper.Vendor.EP.Network
         {
             Pinger = new Ping();
             PingReply = Pinger.Send(HostIP);
+        }
+
+        protected bool CheckAllowedHost()
+        {
+            if(HostIP.Equals(""))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
