@@ -30,7 +30,7 @@ namespace Console.Vendor.EP.Shifter
         {
             try
             {
-                Providers.Monolit.Writeable("Модуль @Network инициализирован").Success();
+                Providers.Monolit.Writeable("Модуль @Shifter инициализирован").Success();
                 Providers.Monolit.Writeable("Ожидаю входящих соединений...").Info();
 
                 if (!this.Server.IsBound)
@@ -95,7 +95,7 @@ namespace Console.Vendor.EP.Shifter
             }
             finally
             {
-                Providers.Monolit.Writeable("Модуль @Network деинизиализирован").Warning();
+                Providers.Monolit.Writeable("Модуль @Shifter деинизиализирован").Warning();
             }
         }
     }
