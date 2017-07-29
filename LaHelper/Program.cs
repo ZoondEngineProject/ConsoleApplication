@@ -13,7 +13,7 @@ namespace Console
 
         private static void PrintInfo()
         {
-            Providers.Monolit.Writeable("Добро пожаловать в LaHelper").Info();
+            Providers.Monolit.Writeable("Добро пожаловать в Zoond Console App").Info();
             Providers.Monolit.Writeable("Версия: 0.37.143а").Info();
             Providers.Monolit.Writeable("Автор: Alexey Mango").Info();
             Providers.Monolit.Writeable("Zoond Engine Lab 2017 (c)").Info();
