@@ -1,6 +1,6 @@
 ﻿namespace Console
 {
-    class Providers
+    public static class Providers
     {
 
         /*

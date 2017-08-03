@@ -79,6 +79,13 @@
     <Compile Include="Vendor\EP\Shifter\Receiver.cs" />
     <Compile Include="Vendor\EP\Shifter\Saver.cs" />
     <Compile Include="Vendor\EP\Shifter\Sender.cs" />
+    <Compile Include="Vendor\Zoond\Archivarius\Default\Architecture.cs" />
+    <Compile Include="Vendor\Zoond\Archivarius\Default\FilesContent.cs" />
+    <Compile Include="Vendor\Zoond\Archivarius\Default\Folders.cs" />
+    <Compile Include="Vendor\Zoond\Archivarius\Distributor.cs" />
+    <Compile Include="Vendor\Zoond\Archivarius\FFManager.cs" />
+    <Compile Include="Vendor\Zoond\Archivarius\Handler.cs" />
+    <Compile Include="Vendor\Zoond\Archivarius\Writer.cs" />
     <Compile Include="Vendor\Zoond\Eloquent\CommandList.cs" />
     <Compile Include="Vendor\Zoond\Eloquent\Commands.cs" />
     <Compile Include="Vendor\Zoond\Eloquent\Dictionary.cs" />
