@@ -29,7 +29,7 @@ namespace Console.Vendor.EP.Shifter
             }
             catch(Exception ex)
             {
-                Providers.Monolit.Writeable(ex.ToString()).Error();
+                Providers.Archivarius.PrepareMessage(ex).Logging().Error();
             }
         }
     }

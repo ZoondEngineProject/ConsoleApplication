@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace LaHelper.Vendor.Zoond.Archivarius.Default
 {
-    class FilesContent
+    sealed class FilesContent : Architecture
     {
         public static void Create()
         {
-
+            if(File.Exists(BasePath + "Main.trace"))
+            {
+                Console.Providers.Monolit.Writeable("Файл логирования уже создан").Error();
+            }
+            else
+            {
+                lock (Locker)
+                {
+                    File.Create(BasePath + "Main.trace");
+                    Console.Providers.Monolit.Writeable("Файл логирования создан").Success();
+                }
+            }
         }
     }
 }

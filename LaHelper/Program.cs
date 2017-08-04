@@ -8,6 +8,8 @@ namespace Console
         static void Main(string[] args)
         {
             PrintInfo();
+            ArchivariusAdapter();
+            MonolitAdapter();
             EloquentAdapter();
         }
 
@@ -17,6 +19,20 @@ namespace Console
             Providers.Monolit.Writeable("Версия: 0.37.143а").Info();
             Providers.Monolit.Writeable("Автор: Alexey Mango").Info();
             Providers.Monolit.Writeable("Zoond Engine Lab 2017 (c)").Info();
+        }
+
+        static void ArchivariusAdapter()
+        {
+            try
+            {
+                Console.Providers.Monolit.Writeable("Модуль @Archivarius инициализирован").Success();
+                Providers.Archivarius.Check();
+            }
+            catch(Exception e)
+            {
+                Providers.Monolit.Writeable("Не удалось инициализировать @Archivarius. Trace: ").Error();
+                Providers.Monolit.Writeable(e.StackTrace).Error();
+            }
         }
         
         static void EloquentAdapter()
@@ -32,7 +48,7 @@ namespace Console
             }
             catch (Exception e)
             {
-                Providers.Monolit.Writeable(e.Message).Error();
+                Providers.Archivarius.PrepareMessage(e).Logging().Error();
             }
             finally
             {

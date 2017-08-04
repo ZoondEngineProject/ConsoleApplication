@@ -63,7 +63,7 @@
                     {
                         this.Sender.Send(Dictionary.RESPONSE_SECURITY_LINE_ENABLED);
                         Providers.Monolit.Writeable(Dictionary.RESPONSE_SECURITY_LINE_ENABLED).Error();
-                        Providers.Network.Disconnect();
+                        Providers.Shifter.Disconnect();
 
                         break;
                     }

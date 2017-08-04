@@ -1,6 +1,6 @@
 ﻿namespace Console
 {
-    public static class Providers
+    sealed class Providers
     {
 
         /*
@@ -42,6 +42,14 @@
         /// </summary>
         public static Vendor.EP.App.Handler App = new Vendor.EP.App.Handler();
 
-        public static Vendor.EP.Shifter.Listener Network = new Vendor.EP.Shifter.Listener();
+        /// <summary>
+        /// Возвращает объект Shifter.Handler для работы с сетью.
+        /// </summary>
+        public static Vendor.EP.Shifter.Listener Shifter = new Vendor.EP.Shifter.Listener();
+
+        /// <summary>
+        /// Возвращает объект Archivarius.Handler для работы с логированием.
+        /// </summary>
+        public static LaHelper.Vendor.Zoond.Archivarius.Handler Archivarius = new LaHelper.Vendor.Zoond.Archivarius.Handler();
     }
 }

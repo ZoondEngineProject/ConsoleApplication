@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E9D413A2-AE9F-4DF8-9142-A520908F88A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LaHelper</RootNamespace>
-    <AssemblyName>LaHelper</AssemblyName>
+    <RootNamespace>Console</RootNamespace>
+    <AssemblyName>ZoondConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

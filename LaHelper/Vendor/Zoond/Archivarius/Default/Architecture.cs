@@ -1,25 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace LaHelper.Vendor.Zoond.Archivarius.Default
 {
     class Architecture
     {
-        private static bool PlatformCreated;
+        protected static string BasePath;
+        protected static object Locker = new object();
 
         public static void Check()
         {
-            if(PlatformCreated)
+            BasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log/");
+
+            if (File.Exists(BasePath + "Main.trace"))
             {
-                Console.Providers.Monolit.Writeable("Платформа для логирования инициализирована").Success();
+                
             }
             else
             {
                 QuestionCreate();
             }
+        }
+
+        public static string GetBasePath()
+        {
+            return BasePath;
         }
 
         private static void QuestionCreate()

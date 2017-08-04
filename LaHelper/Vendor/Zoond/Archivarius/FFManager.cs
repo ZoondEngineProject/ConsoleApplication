@@ -4,19 +4,17 @@ namespace LaHelper.Vendor.Zoond.Archivarius
 {
     class FFManager
     {
+        private object Locker = new object();
+
         public void Write(string message)
         {
-
-        }
-
-        public void CreateFile(string path)
-        {
-
-        }
-
-        public void CreateFolder(string path)
-        {
-
+            lock (Locker)
+            {
+                File.AppendAllText(
+                    Default.Architecture.GetBasePath() + "Main.trace",
+                    message,
+                    System.Text.Encoding.UTF8);
+            }
         }
 
         public void CheckPlatform()

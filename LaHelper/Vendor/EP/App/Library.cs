@@ -31,7 +31,7 @@ namespace Console.Vendor.EP.App
             }
             catch(System.Exception e)
             {
-                Providers.Monolit.Writeable(e.Message).Error();
+                Providers.Archivarius.PrepareMessage(e).Logging().Error();
             }
         }
 

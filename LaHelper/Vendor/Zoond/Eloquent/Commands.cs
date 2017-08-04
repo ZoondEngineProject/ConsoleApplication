@@ -64,12 +64,12 @@ namespace Nasty.Vendor.Zoond.Eloquent
 
         protected void OnNetworkStart()
         {
-            Providers.Network.Start();
+            Providers.Shifter.Start();
         }
 
         protected void OnNetworkStop()
         {
-            Providers.Network.Stop();
+            Providers.Shifter.Stop();
         }
     }
 }

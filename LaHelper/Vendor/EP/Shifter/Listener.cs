@@ -59,16 +59,17 @@ namespace Console.Vendor.EP.Shifter
                             this.Sender = new Sender(this.Client);
                             this.HandlingPacket(this.Receiver.DesinflatedPacket);
                         }
-                        catch (Exception)
+                        catch (Exception e)
                         {
                             Providers.Monolit.Writeable("Пользователь: "+ this.Client.GetID() +" отключился").Info();
+                            Providers.Archivarius.PrepareMessage(e).Logging().Error();
                         }
                     }
                 }
             }
             catch(Exception ex)
             {
-                Providers.Monolit.Writeable(ex.ToString()).Error();
+                Providers.Archivarius.PrepareMessage(ex).Logging().Error();
             }
         }
 
@@ -88,9 +89,10 @@ namespace Console.Vendor.EP.Shifter
             {
                 this.Pool.Interrupt();
             }
-            catch(Exception)
+            catch(Exception e)
             {
                 Providers.Monolit.Writeable("Ошибка уничтожения сокета. Запустите сервер заново").Error();
+                Providers.Archivarius.PrepareMessage(e).Logging().Error();
                 Providers.Eloquent.Inject("this shutdown");
             }
             finally

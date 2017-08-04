@@ -15,7 +15,7 @@ namespace Nasty.Vendor.Zoond.Eloquent
             }
             catch(Exceptions.RunErrorException e)
             {
-                Providers.Monolit.Writeable(e.Message).Error();
+                Providers.Archivarius.PrepareMessage(e).Logging().Error();
             }
         }
 
@@ -112,7 +112,7 @@ namespace Nasty.Vendor.Zoond.Eloquent
             }
             catch(Exceptions.CommandErrorException e)
             {
-                Providers.Monolit.Writeable(e.Message).Error();
+                Providers.Archivarius.PrepareMessage(e).Logging().Error();
             }
 
             this.Listen();

@@ -41,9 +41,10 @@ namespace Console.Vendor.EP.Network
                     Providers.Monolit.Writeable("Сервер в работе").Success();
                 }
             }
-            catch(Exception)
+            catch(Exception e)
             {
                 Providers.Monolit.Writeable("Сперва нужно указать хост для соединения. (server connect)").Error();
+                Providers.Archivarius.PrepareMessage(e).Logging().Error();
             }
         }
 
@@ -120,9 +121,10 @@ namespace Console.Vendor.EP.Network
                     Providers.Monolit.Writeable(string.Format("Стабильность сервера: {0}% (Средний пинг: {1}мс)", prcIterator, iterator)).Error();
                 }
             }
-            catch(Exception)
+            catch(Exception e)
             {
                 Providers.Monolit.Writeable("Сперва нужно указать хост для соединения. (server connect)").Error();
+                Providers.Archivarius.PrepareMessage(e).Logging().Error();
             }
             finally
             {

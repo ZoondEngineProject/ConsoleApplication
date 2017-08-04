@@ -10,6 +10,7 @@
         {
             Filer = new FFManager();
             Message = message;
+            Default.Architecture.Check();
         }
 
         public void Debug()
